@@ -2,12 +2,15 @@ from pytube import YouTube
 from pydub import AudioSegment
 import os
 import time
+import json
 import tkinter as tk
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 
 song_url = 'song_input.txt'
 song_output = 'song_output'
+client_id = config['client_id']
+client_secret = config['client_secret']
 sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id=client_id, client_secret=client_secret))
 track = sp.track(track_id)
 
