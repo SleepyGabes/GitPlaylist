@@ -7,32 +7,30 @@ import tkinter as tk
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 
-song_url = 'song_input.txt'
-song_output = 'song_output'
+with open('config.json','r') as file:
+    config = json.load(file)
+
+# Spotify API credentials
 client_id = config['client_id']
 client_secret = config['client_secret']
+
+# Authenticate using the Client Credentials Flow
 sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id=client_id, client_secret=client_secret))
-track = sp.track(track_id)
 
-def write_file(file_name, content):
-    with open(file_name, 'w') as file:
-        file.write(content)
-    print(f"Content written to '{file_name}' successfully.")
+playlist_id = config['playlist_id']
 
+results = sp.playlist_tracks(playlist_id)
 
-def read_file(file_name):
-    try:
-        with open(file_name, 'r') as file:
-            content = file.read()
-            return content
-    except FileNotFoundError:
-        print(f"File '{file_name}' not found.")
-        return None
+print("Playlist dump created")
+with open("results.json", "w") as dump:
+    json.dump(results, dump, indent=4)
 
-
-
-def main():
-  return
-
-if __name__ == "__main__":
-    main()
+while results:
+    for item in results['items']:
+        track = item['track']
+        artist = item['artists']
+        print(track['name'], artist['name'])
+    if results['next']:
+        results = sp.next(results)
+    else:
+        results = None
