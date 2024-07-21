@@ -36,4 +36,10 @@
 
 - In the `_interal` folder, you should find a `config.json` file, in there put your **Client ID** and **Client secret**.
 
-- Now create a playlist on spotify and add a couple of songs you want to download.
+- Now create a playlist on spotify and add a couple of songs you want to download and get the link of the spotify playlist.
+
+- Now you need get the ID of the playlist, if don't know how click [this](https://developer.spotify.com/documentation/web-api/concepts/spotify-uris-ids).
+
+- Now all you have to do is run the `GitPlaylist.exe` and your song's will start being downloaded here: `_internal/song_outputs`
+
+- Any bugs should be posted in the discord server. Thank you!
