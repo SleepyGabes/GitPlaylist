@@ -4,12 +4,15 @@ from youtubesearchpython import VideosSearch
 import json
 import spotipy
 import os
+import sys
 
 # Welcome message
 print("Welcome to GitPlaylist!")
 
+sys.stdout.reconfigure(encoding='utf-8')
+
 # Open the config.json to read the contents
-with open('config.json', 'r') as file:
+with open('config.json', 'r', encoding='utf-8') as file:
     config = json.load(file)
 
 # Path to folder song output
@@ -32,7 +35,7 @@ def main():
 
     results = sp.playlist_tracks(playlist_id)
 
-    with open("playlist_info.txt", "w") as txt_file:
+    with open("playlist_info.txt", "w", encoding='utf-8') as txt_file:
         while results:
             for item in results['items']:
                 track = item['track']
@@ -47,7 +50,7 @@ def main():
                 results = None
                 print("Finished. Writing to: playlist_info.txt")
 
-    with open('playlist_info.txt', 'r') as track_info:
+    with open('playlist_info.txt', 'r', encoding='utf-8') as track_info:
         # Read each line from the file
         for songquery in track_info:
             songquery = songquery.strip()  # Remove any leading/trailing whitespace
