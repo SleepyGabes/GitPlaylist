@@ -7,7 +7,7 @@
 
 - Go to **Dashboard** and click **Create App**.
 
-  ![Imgur](https://imgur.com/eR3nyST.png)
+  ![Imgur](https://imgur.com/E7bQp97.png)
 
   ![Imgur](https://imgur.com/DgS9x23.png)
 
