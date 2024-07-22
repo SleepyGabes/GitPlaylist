@@ -43,5 +43,3 @@
 - Now all you have to do is run the `GitPlaylist.exe` and your song's will start being downloaded here: `_internal/song_outputs`
 
 - There may be an issue with my Py-to-exe program but if there is something wrong related to modules, run this in `cmd` inside of the folder: `pip install -r requirements.txt`
-
-- Any bugs should be posted in the discord server. Thank you!
