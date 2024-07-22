@@ -48,6 +48,8 @@ class GUI:
         subprocess.Popen(r'notepad config.json')
 
     def start_process(self):
+        self.root.destroy()
+
         # Authenticate using the Client Credentials Flow
         sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id=client_id, client_secret=client_secret))
         print("Spotify Authentication Passed.")
@@ -111,6 +113,7 @@ class GUI:
                         print(f"An error occurred while downloading {link}: {e}")
 
     def close(self):
+        self.root.destroy()
         exit()
 
 def main():
