@@ -1,11 +1,7 @@
 {
-  "client_id":"c465881573af40958f6953f30c53c880",
+  "client_id":"your_client_id",
 
-  "client_secret": "d0ac0cd9921b4ab8a8357bbca4f94353",
+  "client_secret": "your_client_secret",
 
-  "playlist_id": "5ewuoSfmeJz3gm6SjdHKjQ",
-
-  "playlist_uri": "spotify:playlist:5ewuoSfmeJz3gm6SjdHKjQ",
-
-  "username": "SleepyGabe"
+  "playlist_id": "your_playlist_id"
 }
