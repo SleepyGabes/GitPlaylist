@@ -1,6 +1,4 @@
 # GitPlaylist
-![Discord](https://img.shields.io/discord/1264696818240065697?style=for-the-badge&logo=Discord&label=CHAT&color=7289DA)
-
 ### Get started
 
 - First things first, head on over to [Spotify for Developers](https://developer.spotify.com/) to create your app.
